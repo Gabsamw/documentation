@@ -40,6 +40,7 @@
         "language": "fr",
         "default": true,
         "pages": [
+          "index-2",
           {
             "group": "OXYDE Protect",
             "pages": [
@@ -66,8 +67,7 @@
                 "pages": []
               }
             ]
-          },
-          "index-2"
+          }
         ]
       },
       {

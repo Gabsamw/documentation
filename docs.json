@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "luma",
+  "theme": "aspen",
   "name": "Oxyde Groupe Bot's",
   "colors": {
     "primary": "#9D38F2",
@@ -39,10 +39,12 @@
       {
         "language": "fr",
         "default": true,
-        "groups": [
+        "pages": [
           {
             "group": "OXYDE Protect",
-            "pages": []
+            "pages": [
+              "index"
+            ]
           },
           {
             "group": "OXYDE Player",
@@ -64,7 +66,8 @@
                 "pages": []
               }
             ]
-          }
+          },
+          "index-2"
         ]
       },
       {
@@ -73,10 +76,10 @@
           {
             "group": "Getting Started",
             "pages": [
-              "index",
               "quickstart"
             ]
-          }
+          },
+          "index-2-2"
         ]
       }
     ]

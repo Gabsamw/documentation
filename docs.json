@@ -40,12 +40,10 @@
         "language": "fr",
         "default": true,
         "pages": [
-          "index-2",
+          "index",
           {
             "group": "OXYDE Protect",
-            "pages": [
-              "index"
-            ]
+            "pages": []
           },
           {
             "group": "OXYDE Player",

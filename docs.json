@@ -43,7 +43,9 @@
           "index",
           {
             "group": "OXYDE Protect",
-            "pages": []
+            "pages": [
+              "untitled-page"
+            ]
           },
           {
             "group": "OXYDE Player",

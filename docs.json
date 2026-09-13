@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "aspen",
+  "theme": "mint",
   "name": "Oxyde Groupe Bot's",
   "colors": {
     "primary": "#9D38F2",

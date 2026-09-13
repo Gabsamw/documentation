@@ -1,13 +1,16 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "luma",
   "name": "Oxyde Groupe Bot's",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#9D38F2",
+    "light": "#C288F4",
+    "dark": "#7508D1"
   },
-  "favicon": "/favicon.svg",
+  "favicon": {
+    "light": "/images/d0657153250fb9a7867212f5e0f96a34.png",
+    "dark": "/images/d0657153250fb9a7867212f5e0f96a34.png"
+  },
   "navigation": {
     "pages": [
       {
@@ -31,11 +34,56 @@
           "icon": "newspaper"
         }
       ]
-    }
+    },
+    "languages": [
+      {
+        "language": "fr",
+        "default": true,
+        "groups": [
+          {
+            "group": "OXYDE Protect",
+            "pages": []
+          },
+          {
+            "group": "OXYDE Player",
+            "pages": []
+          },
+          {
+            "group": "Panneau de contrôle Web",
+            "pages": [
+              {
+                "group": "OXYDE Protect",
+                "pages": []
+              },
+              {
+                "group": "OXYDE Player",
+                "pages": []
+              },
+              {
+                "group": "Bot Personnalisé",
+                "pages": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "language": "en",
+        "pages": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "index",
+              "quickstart"
+            ]
+          }
+        ]
+      }
+    ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/images/oxyde.webp",
+    "dark": "/images/oxyde.webp"
   },
   "navbar": {
     "links": [
@@ -53,20 +101,31 @@
   "contextual": {
     "options": [
       "copy",
-      "view",
-      "chatgpt",
       "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
-    ]
+      "assistant",
+      "download-pdf",
+      "chatgpt"
+    ],
+    "display": "toc"
   },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+  "icons": {
+    "library": "lucide"
+  },
+  "background": {
+    "decoration": "windows"
+  },
+  "thumbnails": {
+    "background": "/images/oxyde.webp"
+  },
+  "metadata": {
+    "timestamp": true
+  },
+  "interaction": {
+    "drilldown": true
+  },
+  "errors": {
+    "404": {
+      "redirect": true
     }
   }
 }

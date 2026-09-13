@@ -92,7 +92,7 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "https://discord.gg/musCAzfbbD"
       }
     ],
     "primary": {
@@ -109,7 +109,7 @@
       "download-pdf",
       "chatgpt"
     ],
-    "display": "toc"
+    "display": "header"
   },
   "icons": {
     "library": "lucide"
@@ -121,7 +121,7 @@
     "background": "/images/oxyde.webp"
   },
   "metadata": {
-    "timestamp": true
+    "timestamp": false
   },
   "interaction": {
     "drilldown": true
@@ -130,5 +130,8 @@
     "404": {
       "redirect": true
     }
+  },
+  "styling": {
+    "eyebrows": "section"
   }
 }

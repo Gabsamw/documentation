@@ -39,20 +39,37 @@
       {
         "language": "fr",
         "default": true,
-        "pages": [
-          "index",
+        "tabs": [
           {
-            "group": "OXYDE Protect",
+            "tab": "Bienvenue",
             "pages": [
-              "protect"
+              "index"
             ]
           },
           {
-            "group": "OXYDE Player",
-            "pages": []
+            "tab": "OXYDE Protect",
+            "pages": [
+              "protect",
+              {
+                "group": "Utilitaire",
+                "pages": [
+                  "protect/utils/autorole",
+                  "protect/utils/voctime",
+                  "protect/utils/soutien",
+                  "protect/utils/liste-blanche",
+                  "protect/utils/anti-insulte",
+                  "protect/utils/restriction-age",
+                  "protect/utils/anti-transfere",
+                  "protect/utils/todolist"
+                ]
+              }
+            ]
           },
           {
-            "group": "Panneau de contrôle Web",
+            "tab": "OXYDE Player"
+          },
+          {
+            "tab": "Panneau de contrôle Web",
             "pages": [
               {
                 "group": "OXYDE Protect",

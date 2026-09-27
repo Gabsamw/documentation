@@ -1,0 +1,119 @@
+---
+title: "Rôles automatique"
+---
+
+<Note>
+  Cette outils est utilisable avec la commande `op!autorole` ou via `/config panel`
+</Note>
+
+Bienvenue dans le menu de configuration du système de rôles automatiques.<br />Grâce à ce système, un ou plusieurs rôles seront automatiquement attribués à chaque nouveau membre dès son arrivée sur votre serveur.
+
+<Check>
+  Assurez-vous que le bot possède les permissions adéquates pour ajouter le rôle et qu'il est au-dessus des rôles que vous ajoutez
+</Check>
+
+<Warning>
+  L'accès à ce menu nécessite la permission `Administrateur`sur le serveur.
+</Warning>
+
+## Ajouter un rôle
+
+<Steps>
+  <Step title="Ouvrir le menu">
+    Lancez la commande `op!autorole` ou passez par `/config panel`.
+
+    <Frame>
+      <img
+        src="/images/image.png"
+        alt="Image"
+        title="Image"
+        style={{ width:"70%" }}
+      />
+    </Frame>
+  </Step>
+  <Step title="Cliquer sur Ajouter un rôle">
+    Un menu déroulant s'affiche avec la liste des rôles de votre serveur.
+
+    <Frame>
+      <img
+        src="/images/image-1.png"
+        alt="Image"
+        title="Image"
+        style={{ width:"68%" }}
+      />
+    </Frame>
+  </Step>
+  <Step title="Sélectionner le ou les rôles">
+    Cochez un ou plusieurs rôles dans la liste.
+
+    <Tip>
+      Si le rôle recherché n'apparaît pas directement dans la liste, utilisez la barre de recherche intégrée au menu déroulant de Discord pour le retrouver.
+    </Tip>
+
+    <Frame>
+      <img
+        src="/images/image-2.png"
+        alt="Image"
+        title="Image"
+        style={{ width:"70%" }}
+      />
+    </Frame>
+  </Step>
+  <Step title="Confirmation">
+    Les rôles sélectionnés sont ajoutés à la configuration et s'affichent dans le message de confirmation.
+
+    <img
+      src="/images/image-3.png"
+      alt="Image"
+      title="Image"
+      style={{ width:"68%" }}
+    />
+  </Step>
+</Steps>
+
+## Supprimer un rôle
+
+Le fonctionnement est identique : cliquez sur **Supprimer un rôle**, sélectionnez le ou les rôles à retirer de la configuration, puis confirmez.
+
+## Messages de retour
+
+Lors de l'ajout d'un rôle, le bot peut retourner différents statuts selon la situation :
+
+<table>
+  <colgroup>
+    <col width="100" />
+    <col width="591" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Icône</th>
+      <th>Signification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>✅</td>
+      <td>Rôle ajouté avec succès à la configuration</td>
+    </tr>
+    <tr>
+      <td>⚠️</td>
+      <td>Le rôle est déjà présent dans la configuration</td>
+    </tr>
+    <tr>
+      <td>🤖</td>
+      <td>Rôle géré (bot, intégration ou booster) ignoré — ces rôles ne peuvent pas être attribués manuellement</td>
+    </tr>
+    <tr>
+      <td>🚫</td>
+      <td>Rôle avec des permissions sensibles ignoré, par sécurité</td>
+    </tr>
+    <tr>
+      <td>❌</td>
+      <td>Rôle invalide ou introuvable</td>
+    </tr>
+  </tbody>
+</table>
+
+<Info>
+  Les rôles possédant des permissions sensibles (Administrateur, gestion du serveur, etc.) sont automatiquement exclus de l'autorole afin d'éviter toute élévation de privilèges accidentelle.
+</Info>

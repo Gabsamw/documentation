@@ -1,3 +1,59 @@
 ---
 title: "Voctime"
 ---
+
+Le système de **Voctime** permet de suivre et d'afficher le temps passé par les membres de votre serveur en salon vocal.
+
+<Warning>
+  Pour activer cette fonctionnalité, vous devez être le **propriétaire du serveur** ou figurer dans la **whitelist** du bot. La configuration se fait via `/config panel`.
+</Warning>
+
+<Note>
+  Un membre n'est comptabilisé que s'il n'est **pas mute** dans le salon vocal.
+</Note>
+
+## Consulter le temps d'un membre
+
+```shellscript
+/voctime member utilisateur:@membre
+```
+
+Le bot renvoie un message éphémère (visible uniquement par vous) indiquant le temps total passé en vocal par ce membre, au format heures / minutes / secondes.
+
+Un bouton **Refresh** permet de mettre à jour l'information sans relancer la commande.
+
+## Classement des actifs vocaux
+
+```shellscript
+/voctime list page:1
+```
+
+Affiche le classement des membres les plus actifs en vocal sur votre serveur, avec médaille 🥇🥈🥉 pour le podium.
+
+<Check>
+  Le classement dispose de boutons de navigation (**◀️ Précédent**, **🔄 Actualiser**, **Suivant ▶️**) directement sous le message. <br />La session reste active 15 minutes, ou 5 minutes après la dernière interaction.
+</Check>
+
+## Retirer le voctime d'un membre
+
+```text
+/voctime remove utilisateur:@membre
+```
+
+Supprime définitivement les données de temps vocal enregistrées pour ce membre.
+
+<Warning>
+  Réservé au propriétaire du serveur ou aux membres de la whitelist du bot.
+</Warning>
+
+## Réinitialiser tout le serveur
+
+```text
+/voctime reset
+```
+
+Réinitialise le temps vocal de **tous les membres** du serveur. Une confirmation (**Oui** / **Non**) est demandée avant d'appliquer l'action, car elle est irréversible.
+
+<Warning>
+  Réservé au propriétaire du serveur ou aux membres de la whitelist du bot.
+</Warning>

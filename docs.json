@@ -97,13 +97,12 @@
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://app.mintlify.com"
+      "label": "Panneau de contrôle de OXYDE Protect",
+      "href": "https://oxyde-bots.xyz/dashboard/protect"
     }
   },
   "contextual": {
     "options": [
-      "copy",
       "claude",
       "assistant",
       "download-pdf",
@@ -132,6 +131,7 @@
     }
   },
   "styling": {
-    "eyebrows": "section"
+    "eyebrows": "section",
+    "latex": false
   }
 }

@@ -24,14 +24,19 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
+          "anchor": "Panneau de contrôle",
+          "icon": "tower-control",
+          "href": "https://oxyde-bots.xyz/dashboard/protect/"
         },
         {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Serveur support",
+          "icon": "ticket-check",
+          "href": "https://discord.gg/h4JRewJPv9"
+        },
+        {
+          "anchor": "Inviter OXYDE Protect",
+          "icon": "plus",
+          "href": "https://discord.com/oauth2/authorize?client_id=1069647359618854992&permissions=1099511627775&response_type=code&redirect_uri=https%3A%2F%2Foxyde-bots.xyz%2Fapi%2Fdashboard%2Fauth%2Fcallback&integration_type=0&scope=bot+applications.commands+identify+guilds+guilds.members.read"
         }
       ]
     },

@@ -1,0 +1,66 @@
+---
+title: "Anti-Ban"
+---
+
+<Note>
+  Cette protection est accessible via la commande `op!settings` ou `/config panel`.
+</Note>
+
+Le système **Anti-Ban** empêche un utilisateur de bannir plusieurs membres à la suite, que ce soit lors d'un raid, d'un compte compromis ou d'un abus de permissions.
+
+<Note>
+  Il intègre aussi une protection **Anti-Unban** : un raider ne peut pas débannir les personnes bannies. Seuls le **propriétaire du serveur** et les membres **whitelistés** peuvent lever un bannissement.<br />Ce système là n'est pas désactivable
+</Note>
+
+<Warning>
+  Tout membre non whitelisté qui enfreint la limite peut être sanctionné par le bot.
+</Warning>
+
+<Info>
+  Seul le propriétaire du serveur peut whitelister les personnes autorisées à configurer les protections.
+</Info>
+
+## Configuration
+
+<Steps>
+  <Step title="Ouvrir le panel">
+    Exécutez la commande `/config panel` ou `op!settings`.
+  </Step>
+  <Step title="Sélectionner la protection">
+    Ouvrez le menu déroulant et choisissez `1. Anti Mass Ban`.
+  </Step>
+  <Step title="Activer la protection">
+    Utilisez le bouton **Activer** / **Désactiver**. Les boutons et les émojis changent selon l'état de la fonctionnalité.
+  </Step>
+</Steps>
+
+<Frame>
+  ![Menu de configuration de l'Anti-Ban](/images/config-antimass.png "Menu de configuration de l'Anti-Ban")
+</Frame>
+
+## Alerte
+
+Lorsqu'un membre est sanctionné, le propriétaire du serveur reçoit une alerte en message privé avec l'utilisateur banni, le nombre de bans détectés et l'heure de l'incident.
+
+Si ses messages privés sont fermés, l'alerte est envoyée dans le premier salon disponible parmi :
+
+1. le salon `protect-spam-logs`
+2. un salon réservé à la modération
+3. le salon système du serveur
+
+## Permissions requises
+
+Le bot a besoin des permissions suivantes pour que cette protection fonctionne :
+
+- **Voir les logs du serveur** (audit logs) : pour identifier l'auteur d'un bannissement
+- **Bannir des membres** : pour sanctionner l'auteur d'un ban massif
+
+<Check>
+  Placez le rôle du bot **au-dessus** des rôles du staff et des équipes en qui vous n'avez pas une confiance totale, sinon il ne pourra pas les sanctionner.
+
+  Si vous utilisez un bot personnalisé, placez-le **en dessous** de OXYDE Protect.
+</Check>
+
+<Card title="Un problème avec cette fonctionnalité ?" icon="life-buoy" horizontal href="https://discord.gg/uJC8QR9Yky">
+  Rejoignez notre serveur de [support](https://discord.gg/neU8YJYkzQ), on vous répondra rapidement.
+</Card>

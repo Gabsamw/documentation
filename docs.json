@@ -51,6 +51,20 @@
             "pages": [
               "protect",
               {
+                "group": "Protection",
+                "pages": [
+                  "protect/antiraid/anti-ban",
+                  "protect/antiraid/anti-kick",
+                  "protect/antiraid/anti-bot",
+                  "anti-ghost-ping",
+                  "anti-channel",
+                  "anti-role",
+                  "anti-perm-anti-perm-up",
+                  "anti-lien",
+                  "anti-spam"
+                ]
+              },
+              {
                 "group": "Utilitaire",
                 "pages": [
                   "protect/utils/autorole",
@@ -66,7 +80,10 @@
             ]
           },
           {
-            "tab": "OXYDE Player"
+            "tab": "OXYDE Player",
+            "pages": [
+              "introduction"
+            ]
           },
           {
             "tab": "Panneau de contrôle Web",

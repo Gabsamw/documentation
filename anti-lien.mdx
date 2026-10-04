@@ -1,5 +1,125 @@
 ---
-title: "Anti-Lien"
+title: "Anti Lien"
 ---
 
-## En cours de développement
+<Note>
+  Cette protection est accessible via la commande `op!settings` ou `/config panel`.
+</Note>
+
+Le système **Anti-Lien** empêche les membres d'envoyer des liens sur votre serveur. Les messages contenant un lien sont supprimés automatiquement, que ce soit à l'envoi ou après une modification du message.
+
+<Info>
+  Seul le propriétaire du serveur peut whitelister les personnes autorisées à configurer les protections.
+</Info>
+
+## Configuration
+
+<Steps>
+  <Step title="Ouvrir le panel">
+    Exécutez la commande `/config panel` ou `op!settings`.
+  </Step>
+  <Step title="Sélectionner la protection">
+    Ouvrez le menu déroulant et choisissez `Anti Lien`.
+  </Step>
+  <Step title="Activer la protection">
+    Utilisez le bouton **Activer** / **Désactiver**. Les boutons et les émojis changent selon l'état de la fonctionnalité.
+
+    <Frame>
+      <img
+        src="/images/image-12.png"
+        alt="Image"
+        title="Image"
+      />
+    </Frame>
+  </Step>
+  <Step title="Listes blanches">
+    L'Anti-Lien dispose de ses propres whitelists, en plus de la whitelist globale du serveur. Trois boutons sont disponibles dans le panel :
+
+    - **Whitelist Salon** : les liens sont autorisés dans les salons ajoutés. Dans un fil de discussion, c'est le salon parent qui est pris en compte.
+    - **Whitelist Catégorie & Rôle** : les liens sont autorisés dans toutes les catégories ajoutées, et pour tous les membres possédant un des rôles ajoutés. Deux menus déroulants permettent de sélectionner plusieurs rôles ou catégories à la fois.
+    - **Whitelist Anti-Lien** : les utilisateurs ajoutés peuvent envoyer des liens partout, sans être sanctionnés.
+
+    <Warning>
+      Ajouter un salon, une catégorie, un rôle ou un utilisateur à la whitelist autorise **tous les types de liens** pour cette cible.
+    </Warning>
+
+    <Tip>
+      Si l'utilisateur recherché n'apparaît pas directement dans la liste, utilisez la barre de recherche intégrée au menu déroulant de Discord pour le retrouver (**pseudo sur le serveur**).
+    </Tip>
+  </Step>
+</Steps>
+
+## Détections
+
+### Liens classiques
+
+Tout message contenant un lien (`http://` ou `https://`) est supprimé. La détection ignore les espaces et les majuscules, ce qui empêche de contourner la protection en écrivant le lien de façon "découpée".
+
+### Invitations Discord
+
+Les invitations vers d'autres serveurs Discord sont détectées sous toutes leurs formes (`discord.gg`, `discord.com/invite`, `discordapp.com/invite`), y compris lorsqu'elles sont écrites avec des espaces.
+
+### Messages modifiés
+
+Un membre qui modifie un message après son envoi pour y ajouter un lien est détecté de la même manière : le message est supprimé.
+
+### Liens NoelShack
+
+Les liens vers des images hébergées sur **NoelShack** sont considérés comme du contenu sensible ou inapproprié. Ils entraînent la suppression du message et le **bannissement** immédiat de l'auteur.
+
+<Warning>
+  Cette détection fonctionne indépendamment de l'état de l'Anti-Lien et ne peut pas être contournée par la whitelist.
+</Warning>
+
+Si le bot ne peut pas bannir l'auteur (permissions ou hiérarchie des rôles), il lui **retire l'accès au salon** à la place.
+
+## Liens autorisés
+
+Certains liens sont ignorés par l'Anti-Lien :
+
+- les **GIFs** (Tenor, Giphy, Klipy) ;
+- les liens vers des **messages ou salons** de votre propre serveur ;
+- les **images et fichiers** hébergés par Discord ;
+- les liens **Spotify**.
+
+## Sanction
+
+Contrairement aux autres protections, l'Anti-Lien ne bannit pas pour un lien classique. Lorsqu'un lien est détecté :
+
+1. Le **message est supprimé**.
+2. Le membre reçoit un **message privé** lui rappelant que les liens sont interdits sur le serveur.
+3. Un **message d'avertissement** est envoyé dans le salon, puis supprimé automatiquement au bout de quelques secondes.
+4. L'incident est enregistré dans les **logs** de protection.
+
+<Note>
+  Si les messages privés du membre sont fermés, seul le message dans le salon est envoyé.
+</Note>
+
+## Exclusions
+
+Ne sont jamais sanctionnés :
+
+- le **propriétaire du serveur** ;
+- les membres présents dans la **whitelist globale** ou la **whitelist Anti-Lien** ;
+- les membres possédant un **rôle whitelisté** ;
+- les messages envoyés dans un **salon** ou une **catégorie whitelistée** ;
+- les messages envoyés dans les **salons de tickets** ;
+- les **bots**.
+
+## Permissions requises
+
+Le bot a besoin des permissions suivantes pour que cette protection fonctionne :
+
+- **Gérer les messages** : pour supprimer les messages contenant un lien.
+- **Bannir des membres** : pour sanctionner les liens NoelShack.
+- **Gérer les permissions des salons** : pour retirer l'accès au salon si le bannissement est impossible.
+
+<Check>
+  Placez le rôle du bot **au-dessus** des rôles du staff et des équipes en qui vous n'avez pas une confiance totale, sinon il ne pourra pas les sanctionner.
+
+  Si vous utilisez un bot personnalisé, placez-le **en dessous** de OXYDE Protect.
+</Check>
+
+<Card title="Un problème avec cette fonctionnalité ?" icon="life-buoy" horizontal href="https://discord.gg/uJC8QR9Yky">
+  Rejoignez notre serveur de [support](https://discord.gg/neU8YJYkzQ), on vous répondra rapidement.
+</Card>

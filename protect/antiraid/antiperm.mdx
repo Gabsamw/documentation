@@ -1,0 +1,100 @@
+---
+title: "Anti-perm"
+---
+
+<Note>
+  Cette protection est accessible via la commande `op!settings` ou `/config panel`.
+</Note>
+
+Le système **Anti-Perm / Up** empêche de donner des rôles / permissions dangereux à n'importe qui sur le serveur.
+
+<Warning>
+  Tout membre non whitelisté qui enfreint la limite peut être sanctionné par le bot.
+</Warning>
+
+<Note>
+  Cette fonctionnalité intègre aussi une protection **Anti-Unban** : un raider ne peut pas débannir les personnes bannies. <br />Seuls le **propriétaire du serveur** et les membres **whitelistés** peuvent lever un bannissement.<br />Ce système là n'est pas désactivable
+</Note>
+
+<Info>
+  Seul le propriétaire du serveur peut whitelister les personnes autorisées à configurer les protections.
+</Info>
+
+## Configuration Anti-Perm
+
+<Steps>
+  <Step title="Ouvrir le panel">
+    Exécutez la commande `/config panel` ou `op!settings`.
+  </Step>
+  <Step title="Sélectionner la protection">
+    Ouvrez le menu déroulant et choisissez `7. Anti-Perm`.
+  </Step>
+  <Step title="Activer la protection">
+    Utilisez le bouton **Activer** / **Désactiver**. Les boutons et les émojis changent selon l'état de la fonctionnalité.
+
+    <Frame>
+      ![Image](/images/image-8.png "Image")
+    </Frame>
+  </Step>
+  <Step title="Liste blanche">
+    L'Anti-Channel dispose de sa propre whitelist en plus de la whitelist global au serveur.<br /><br />**Ajouter un utilisateur**: Un menu déroulant s'affiche avec la liste des utilisateurs de votre serveur.
+
+    <Tip>
+      Si le l'utilisateur recherché n'apparaît pas directement dans la liste, utilisez la barre de recherche intégrée au menu déroulant de Discord pour le retrouver (**pseudo sur le serveur**).
+    </Tip>
+
+    **Supprimer un utilisateur**: Le fonctionnement est identique.
+
+    <Frame>
+      ![Image](/images/image-9.png "Image")
+    </Frame>
+  </Step>
+</Steps>
+
+## Configuration Anti-Perm_Up
+
+<Steps>
+  <Step title="Ouvrir le panel">
+    Exécutez la commande `/config panel` ou `op!settings`.
+  </Step>
+  <Step title="Sélectionner la protection">
+    Ouvrez le menu déroulant et choisissez `8. Anti-Perm_Up`.
+  </Step>
+  <Step title="Activer la protection">
+    Utilisez le bouton **Activer** / **Désactiver**. Les boutons et les émojis changent selon l'état de la fonctionnalité.
+
+    <Frame>
+      ![Image](/images/image-10.png "Image")
+    </Frame>
+  </Step>
+  <Step title="Liste blanche">
+    L'Anti-Channel dispose de sa propre whitelist en plus de la whitelist global au serveur.<br /><br />**Ajouter un utilisateur**: Un menu déroulant s'affiche avec la liste des utilisateurs de votre serveur.
+
+    <Tip>
+      Si le l'utilisateur recherché n'apparaît pas directement dans la liste, utilisez la barre de recherche intégrée au menu déroulant de Discord pour le retrouver (**pseudo sur le serveur**).
+    </Tip>
+
+    **Supprimer un utilisateur**: Le fonctionnement est identique.
+
+    <Frame>
+      ![Image](/images/image-11.png "Image")
+    </Frame>
+  </Step>
+</Steps>
+
+## Permissions requises
+
+Le bot a besoin des permissions suivantes pour que cette protection fonctionne :
+
+- **Voir les logs du serveur** (audit logs) : pour identifier l'auteur de l'expulsion
+- **Administrateur : Tout les permissions pour assurer son fonctionnement**
+
+<Check>
+  Placez le rôle du bot **au-dessus** des rôles du staff et des équipes en qui vous n'avez pas une confiance totale, sinon il ne pourra pas les sanctionner.
+
+  Si vous utilisez un bot personnalisé, placez-le **en dessous** de OXYDE Protect.
+</Check>
+
+<Card title="Un problème avec cette fonctionnalité ?" icon="life-buoy" horizontal href="https://discord.gg/uJC8QR9Yky">
+  Rejoignez notre serveur de [support](https://discord.gg/neU8YJYkzQ), on vous répondra rapidement.
+</Card>

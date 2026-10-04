@@ -71,7 +71,7 @@
                   "anti-ghost-ping",
                   "anti-channel",
                   "anti-role",
-                  "anti-perm-anti-perm-up",
+                  "protect/antiraid/antiperm",
                   "anti-lien",
                   "anti-spam"
                 ]

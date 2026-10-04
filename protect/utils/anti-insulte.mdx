@@ -2,4 +2,60 @@
 title: "Anti Insulte"
 ---
 
-## En cours de développement
+<Note>
+  Cette protection est accessible via la commande `op!settings` ou `/config panel`.
+</Note>
+
+Le système **Anti-Insulte** empêche un utilisateur d'utiliser des mots sont configurer dans l'automod.
+
+<Info>
+  Seul le propriétaire du serveur peut whitelister les personnes autorisées à configurer les protections.
+</Info>
+
+## Configuration
+
+<Steps>
+  <Step title="Ouvrir le panel">
+    Exécutez la commande `/config panel` ou `op!settings`.
+  </Step>
+  <Step title="Sélectionner la protection">
+    Ouvrez le menu déroulant et choisissez `11. Autre option => 6. Anti-Insulte`.
+  </Step>
+  <Step title="Créer la règle">
+    Utilisez le bouton **Créer la règle** Oxyde Protect vous demandera de remplir le modal en choisissant un salon, Un preset de mot sera émis dans la liste de l'automod.
+
+    <Frame>
+      ![Image](/images/image-13.png "Image")
+    </Frame>
+  </Step>
+  <Step title="Modification de l'anti-insulte">
+    Vous pouvez utiliser le bouton **Ajouter / Supprimer** un mot de l'automod.
+
+    ![Image](/images/image-15.png "Image")
+
+    <Tip>
+      Vous pouvez toujours enlève l'automod-insulte en utilisant le bouton **Désactiver / Réactivé.**
+    </Tip>
+  </Step>
+</Steps>
+
+<Danger>
+  Cependant certain mot en anglais peuvent être bloquer avec un mot en français.
+</Danger>
+
+## Permissions requises
+
+Le bot a besoin des permissions suivantes pour que cette protection fonctionne :
+
+- **Voir les logs du serveur** (audit logs) : pour identifier l'auteur de l'expulsion.
+- **Gérer le serveur** : pour créer, modifier, supprimer des automods.
+
+<Check>
+  Placez le rôle du bot **au-dessus** des rôles du staff et des équipes en qui vous n'avez pas une confiance totale, sinon il ne pourra pas les sanctionner.
+
+  Si vous utilisez un bot personnalisé, placez-le **en dessous** de OXYDE Protect.
+</Check>
+
+<Card title="Un problème avec cette fonctionnalité ?" icon="life-buoy" horizontal href="https://discord.gg/uJC8QR9Yky">
+  Rejoignez notre serveur de [support](https://discord.gg/neU8YJYkzQ), on vous répondra rapidement.
+</Card>

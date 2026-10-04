@@ -2,4 +2,50 @@
 title: "Anti Ghost Ping"
 ---
 
-## En cours de développement
+<Note>
+  Cette protection est accessible via la commande `op!settings` ou `/config panel`.
+</Note>
+
+Le système **Anti-ghostping** renverra un message ping qui est supprimer par une personne.
+
+<Info>
+  Seul le propriétaire du serveur peut whitelister les personnes autorisées à configurer les protections.
+</Info>
+
+## Configuration
+
+<Steps>
+  <Step title="Ouvrir le panel">
+    Exécutez la commande `/config panel` ou `op!settings`.
+  </Step>
+  <Step title="Sélectionner la protection">
+    Ouvrez le menu déroulant et choisissez `4. Anti Ghost Ping`.
+  </Step>
+  <Step title="Activer la protection">
+    Utilisez le bouton **Activer** / **Désactiver**. Les boutons et les émojis changent selon l'état de la fonctionnalité.
+
+    <img
+      src="/images/image-3.png"
+      alt="Image"
+      title="Image"
+      style={{ width:"39%" }}
+    />
+  </Step>
+</Steps>
+
+## Permissions requises
+
+Le bot a besoin des permissions suivantes pour que cette protection fonctionne :
+
+- **Voir les logs du serveur** (audit logs) : pour identifier l'auteur de l'ajout
+- **Gérer les messages** : pour supprimer le contenu du message
+
+<Check>
+  Placez le rôle du bot **au-dessus** des rôles du staff et des équipes en qui vous n'avez pas une confiance totale, sinon il ne pourra pas les sanctionner.
+
+  Si vous utilisez un bot personnalisé, placez-le **en dessous** de OXYDE Protect.
+</Check>
+
+<Card title="Un problème avec cette fonctionnalité ?" icon="life-buoy" horizontal href="https://discord.gg/uJC8QR9Yky">
+  Rejoignez notre serveur de [support](https://discord.gg/neU8YJYkzQ), on vous répondra rapidement.
+</Card>

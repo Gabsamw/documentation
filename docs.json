@@ -56,6 +56,13 @@
             "pages": [
               "protect",
               {
+                "group": "CGU & Policy",
+                "pages": [
+                  "tos",
+                  "policy"
+                ]
+              },
+              {
                 "group": "Protection",
                 "pages": [
                   "protect/antiraid/anti-ban",
@@ -87,7 +94,14 @@
           {
             "tab": "OXYDE Player",
             "pages": [
-              "introduction"
+              "introduction",
+              {
+                "group": "CGU TOS",
+                "pages": [
+                  "cgu",
+                  "tos-2"
+                ]
+              }
             ]
           },
           {

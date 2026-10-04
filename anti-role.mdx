@@ -2,4 +2,63 @@
 title: "Anti-Rôle"
 ---
 
-## En cours de développement
+<Note>
+  Cette protection est accessible via la commande `op!settings` ou `/config panel`.
+</Note>
+
+Le système **Anti-Rôle** empêche tout création, suppression et modification de rôle.<br />OXYDE Protect remet chaque chose à l'identique comme ils était.
+
+<Warning>
+  Tout membre non whitelisté qui enfreint la limite peut être sanctionné par le bot.
+</Warning>
+
+<Info>
+  Seul le propriétaire du serveur peut whitelister les personnes autorisées à configurer les protections.
+</Info>
+
+## Configuration
+
+<Steps>
+  <Step title="Ouvrir le panel">
+    Exécutez la commande `/config panel` ou `op!settings`.
+  </Step>
+  <Step title="Sélectionner la protection">
+    Ouvrez le menu déroulant et choisissez `6. Anti-Rôle`.
+  </Step>
+  <Step title="Activer la protection">
+    Utilisez le bouton **Activer** / **Désactiver**. Les boutons et les émojis changent selon l'état de la fonctionnalité.
+
+    <Frame>
+      ![Image](/images/image-6.png "Image")
+    </Frame>
+  </Step>
+  <Step title="Liste blanche">
+    L'Anti-Channel dispose de sa propre whitelist en plus de la whitelist global au serveur.<br /><br />**Ajouter un utilisateur**: Un menu déroulant s'affiche avec la liste des utilisateurs de votre serveur.
+
+    <Tip>
+      Si le l'utilisateur recherché n'apparaît pas directement dans la liste, utilisez la barre de recherche intégrée au menu déroulant de Discord pour le retrouver (**pseudo sur le serveur**).
+    </Tip>
+
+    **Supprimer un utilisateur**: Le fonctionnement est identique.
+
+    ![Image](/images/image-7.png "Image")
+  </Step>
+</Steps>
+
+## Permissions requises
+
+Le bot a besoin des permissions suivantes pour que cette protection fonctionne :
+
+- **Voir les logs du serveur** (audit logs) : pour identifier l'auteur de l'expulsion
+- **Bannir des membres** : pour sanctionner l'auteur d'une expulsion massive
+- **Gérer les rôles** : pour créer, modifier, supprimer des salons
+
+<Check>
+  Placez le rôle du bot **au-dessus** des rôles du staff et des équipes en qui vous n'avez pas une confiance totale, sinon il ne pourra pas les sanctionner.
+
+  Si vous utilisez un bot personnalisé, placez-le **en dessous** de OXYDE Protect.
+</Check>
+
+<Card title="Un problème avec cette fonctionnalité ?" icon="life-buoy" horizontal href="https://discord.gg/uJC8QR9Yky">
+  Rejoignez notre serveur de [support](https://discord.gg/neU8YJYkzQ), on vous répondra rapidement.
+</Card>

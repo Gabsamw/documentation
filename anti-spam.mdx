@@ -2,4 +2,139 @@
 title: "Anti-Spam"
 ---
 
-## En cours de développement
+<Note>
+  Cette protection est accessible via la commande `op!settings` ou `/config panel`.
+</Note>
+
+Le système **Anti-Spam** détecte et sanctionne automatiquement les comportements abusifs : messages en rafale, publicités d'invitations, mentions de masse, webhooks malveillants, bots externes et spam sur plusieurs salons.
+
+<Warning>
+  Tout membre non whitelisté qui déclenche une détection peut être sanctionné par le bot.
+</Warning>
+
+<Note>
+  Cette fonctionnalité intègre aussi une protection **Anti-Unban** : un raider ne peut pas débannir les personnes bannies. <br />Seuls le **propriétaire du serveur** et les membres **whitelistés** peuvent lever un bannissement.<br />Ce système là n'est pas désactivable
+</Note>
+
+<Info>
+  Seul le propriétaire du serveur peut whitelister les personnes autorisées à configurer les protections.
+</Info>
+
+## Configuration
+
+<Steps>
+  <Step title="Ouvrir le panel">
+    Exécutez la commande `/config panel` ou `op!settings`.
+  </Step>
+  <Step title="Sélectionner la protection">
+    Ouvrez le menu déroulant et choisissez `Anti Spam`.
+  </Step>
+  <Step title="Activer la protection">
+    Utilisez le bouton **Activer** / **Désactiver**. Les boutons et les émojis changent selon l'état de la fonctionnalité.
+  </Step>
+  <Step title="Liste blanche">
+    L'Anti-Spam dispose de ses propres whitelists, en plus de la whitelist globale du serveur :
+
+    - **Utilisateurs** : les membres ajoutés ne sont plus surveillés.
+    - **Salons** : les messages envoyés dans ces salons ne sont pas analysés (valable aussi pour les webhooks).
+
+    <Tip>
+      Si l'utilisateur recherché n'apparaît pas directement dans la liste, utilisez la barre de recherche intégrée au menu déroulant de Discord pour le retrouver (**pseudo sur le serveur**).
+    </Tip>
+  </Step>
+</Steps>
+
+## Détections
+
+L'Anti-Spam surveille plusieurs types de comportements en parallèle. Les seuils sont volontairement non publics et peuvent évoluer.
+
+### Messages envoyés trop rapidement
+
+Lorsqu'un membre envoie trop de messages en très peu de temps, la sanction est progressive :
+
+1. **Avertissement** : un message l'invite à se calmer.
+2. **Expulsion** (kick) : s'il continue malgré l'avertissement. Ses messages récents sont supprimés.
+3. **Bannissement définitif** : en cas de récidive après une expulsion.
+
+<Warning>
+  Si le membre tente de **contourner** l'Anti-Spam (par exemple en reprenant juste après son avertissement), il est **mis sous silence** (timeout) pendant une heure.
+</Warning>
+
+### Messages identiques répétés
+
+L'envoi répété du même message (copier-coller) sur une courte période entraîne un **bannissement** et la suppression des messages concernés.
+
+### Invitations Discord en rafale
+
+Poster plusieurs invitations de serveurs Discord à la suite entraîne un **bannissement**.
+
+### Mentions `@everyone` et `@here`
+
+Spammer ces mentions sur une courte période entraîne un **bannissement**.
+
+### Spam sur plusieurs salons
+
+Un membre qui envoie beaucoup de messages dans de nombreux salons différents reçoit d'abord un **avertissement**. S'il continue, il est **banni** et ses messages sont nettoyés dans tous les salons concernés.
+
+### Webhooks abusifs
+
+Si un webhook envoie des messages en rafale ou spamme des mentions :
+
+- ses messages sont supprimés ;
+- le **webhook est supprimé** ;
+- le serveur est placé sous **surveillance renforcée** des créations de webhooks pendant quelques minutes.
+
+### Bots externes
+
+Un utilisateur qui spamme via une application ou un bot externe au serveur (applications installées sur son compte) est **banni**, même si les messages ne viennent pas de lui directement.
+
+## Actions automatiques
+
+En plus de la sanction, le bot peut :
+
+- **Supprimer les messages** de l'auteur, y compris ceux envoyés juste après la détection ;
+- **Supprimer l'historique récent** de l'auteur lors d'un bannissement ;
+- **Générer un transcript** des messages de spam, envoyé dans le salon `protect-spam-logs` ;
+- **Alerter l'équipe de modération** de OXYDE Protect.
+
+<Note>
+  Le salon `protect-spam-logs` est créé automatiquement s'il n'existe pas. Il est privé et invisible pour `@everyone`.
+</Note>
+
+## Alerte
+
+Lorsqu'un membre est banni, le propriétaire du serveur peut recevoir une **alerte par e-mail** (si une adresse e-mail vérifiée est enregistrée) contenant l'utilisateur sanctionné, la raison, la sévérité et l'heure de l'incident.
+
+## Exclusions
+
+Ne sont jamais sanctionnés :
+
+- le **propriétaire du serveur** ;
+- les membres présents dans la **whitelist globale** ou la **whitelist Anti-Spam** ;
+- les messages envoyés dans un **salon whitelisté** ;
+- le bot lui-même.
+
+<Info>
+  Les serveurs dont le nom indique un usage de **publicité / partage** sont ignorés par l'Anti-Spam.
+</Info>
+
+## Permissions requises
+
+Le bot a besoin des permissions suivantes pour que cette protection fonctionne :
+
+- **Expulser des membres** : requis pour que la protection s'active, et pour l'expulsion ;
+- **Bannir des membres** : pour sanctionner les récidivistes et les détections graves ;
+- **Exclure temporairement des membres** : pour la mise sous silence en cas de tentative de contournement ;
+- **Gérer les messages** : pour supprimer les messages de spam ;
+- **Gérer les webhooks** : pour supprimer les webhooks abusifs ;
+- **Gérer les salons** : pour créer le salon `protect-spam-logs`.
+
+<Check>
+  Placez le rôle du bot **au-dessus** des rôles du staff et des équipes en qui vous n'avez pas une confiance totale, sinon il ne pourra pas les sanctionner.
+
+  Si vous utilisez un bot personnalisé, placez-le **en dessous** de OXYDE Protect.
+</Check>
+
+<Card title="Un problème avec cette fonctionnalité ?" icon="life-buoy" horizontal href="https://discord.gg/uJC8QR9Yky">
+  Rejoignez notre serveur de [support](https://discord.gg/neU8YJYkzQ), on vous répondra rapidement.
+</Card>

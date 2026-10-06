@@ -2,4 +2,71 @@
 title: "Restriction d'âge"
 ---
 
-## En cours de développement
+<Note>
+  Cette protection est accessible via la commande `op!settings` ou `/config panel`.
+</Note>
+
+Le système de **restriction d'âge** est baser sur l'âge du compte et éviter les doubles comptes.
+
+<Info>
+  Seul le propriétaire du serveur peut whitelister les personnes autorisées à configurer les protections.
+</Info>
+
+<Warning>
+  Tout configuration personnalisable peux empêcher certain compte spécifique.
+</Warning>
+
+## Configuration
+
+<Steps>
+  <Step title="Ouvrir le panel">
+    Exécutez la commande `/config panel` ou `op!settings`.
+  </Step>
+  <Step title="Sélectionner la protection">
+    Ouvrez le menu déroulant et choisissez `11. Autre Option => 7. Restriction d'âge`.
+  </Step>
+  <Step title="Activer la protection">
+    Utilisez le bouton **Activer** / **Désactiver**. Les boutons et les émojis changent selon l'état de la fonctionnalité.
+
+    <Frame>
+      <img
+        src="/images/image-18.png"
+        alt="Image"
+        title="Image"
+        className="mx-auto"
+        style={{ width:"90%" }}
+      />
+    </Frame>
+
+    <Tip>
+      Vous pouvez configurer la limite d'âge du compte avec un modal demande le nombre de temps avec l'unité en heure, et autre...
+
+      <Frame>
+        <img
+          src="/images/image-19.png"
+          alt="Image"
+          title="Image"
+          className="mx-auto"
+          style={{ width:"89%" }}
+        />
+      </Frame>
+    </Tip>
+  </Step>
+</Steps>
+
+## Permissions requises
+
+Le bot a besoin des permissions suivantes pour que cette protection fonctionne :
+
+- **Voir les logs du serveur** (audit logs) : pour identifier l'auteur de l'expulsion
+- **Administrateur** : Cette permission est très recommandé pour l'ensemble des protections
+
+<Check>
+  Placez le rôle du bot **au-dessus** des rôles du staff et des équipes en qui vous n'avez pas une confiance totale, sinon il ne pourra pas les sanctionner.
+
+  Si vous utilisez un bot personnalisé, placez-le **en dessous** de OXYDE Protect.
+</Check>
+
+<Card title="Un problème avec cette fonctionnalité ?" icon="life-buoy" horizontal href="https://discord.gg/uJC8QR9Yky">
+  Rejoignez notre serveur de [support](https://discord.gg/neU8YJYkzQ), on vous répondra rapidement.
+</Card>

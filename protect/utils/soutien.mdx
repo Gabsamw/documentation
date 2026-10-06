@@ -2,4 +2,82 @@
 title: "Soutien"
 ---
 
-## En cours de développement
+<Note>
+  Cette protection est accessible via la commande `op!settings` ou `/config panel`.
+</Note>
+
+**Le système de soutien :** Le bot attribuera automatiquement un rôle spécifique et préalablement configuré à un membre lorsqu’un lien sera ajouté à sa bio.
+
+<Info>
+  Seul le propriétaire du serveur peut whitelister les personnes autorisées à configurer les protections.
+</Info>
+
+<Danger>
+  Le système soutien marche au bout de 10 minutes après la configuration avec notre système de cache et d'identification.
+</Danger>
+
+## Configuration
+
+<Steps>
+  <Step title="Ouvrir le panel">
+    Exécutez la commande `/config panel` ou `op!settings`.
+  </Step>
+  <Step title="Sélectionner la protection">
+    Ouvrez le menu déroulant et choisissez `11. Autre Option => 4. Restriction d'âge`.
+  </Step>
+  <Step title="Activer la protection">
+    Utilisez le bouton **Activer** / **Désactiver**. Les boutons et les émojis changent selon l'état de la fonctionnalité.
+
+    <Frame>
+      <img
+        src="/images/image-20.png"
+        alt="Image"
+        title="Image"
+        className="mx-auto"
+        style={{ width:"83%" }}
+      />
+    </Frame>
+
+    <Note>
+      Concernant la configuration de rôle, vous avez directement un sélecteur de rôle intégré de Discord.
+
+      <img
+        src="/images/image-21.png"
+        alt="Image"
+        title="Image"
+        className="mx-auto"
+        style={{ width:"76%" }}
+      />
+    </Note>
+  </Step>
+  <Step title="Message soutien">
+    <Warning>
+      La configuration du message soutien, il est juste nécessaire de mettre après le .gg exemple /oxyde ou url généré.
+
+      <img
+        src="/images/image-22.png"
+        alt="Image"
+        title="Image"
+        className="mx-auto"
+        style={{ width:"70%" }}
+      />
+    </Warning>
+  </Step>
+</Steps>
+
+## Permissions requises
+
+Le bot a besoin des permissions suivantes pour que cette protection fonctionne :
+
+- **Voir les logs du serveur** (audit logs) : pour identifier l'auteur de l'expulsion.
+- **Administrateur** : Cette permission est très recommandé pour l'ensemble du bot.
+
+<Check>
+  Placez le rôle du bot **au-dessus** des rôles du staff et des équipes en qui vous n'avez pas une confiance totale, sinon il ne pourra pas les sanctionner.
+
+  Si vous utilisez un bot personnalisé, placez-le **en dessous** de OXYDE Protect.
+</Check>
+
+<Card title="Un problème avec cette fonctionnalité ?" icon="life-buoy" horizontal href="https://discord.gg/uJC8QR9Yky">
+  Rejoignez notre serveur de [support](https://discord.gg/neU8YJYkzQ), on vous répondra rapidement.
+</Card>

@@ -6,15 +6,11 @@ title: "Restriction d'âge"
   Cette protection est accessible via la commande `op!settings` ou `/config panel`.
 </Note>
 
-Le système de **restriction d'âge** est baser sur l'âge du compte et éviter les doubles comptes.
+**Le système de restriction d’âge :** Le bot vérifie l’ancienneté du compte Discord afin de limiter les risques liés aux doubles comptes et aux comptes récemment créés. Cette fonctionnalité permet notamment de réduire les abus, les contournements de sanctions et les comptes utilisés à des fins malveillantes.
 
 <Info>
   Seul le propriétaire du serveur peut whitelister les personnes autorisées à configurer les protections.
 </Info>
-
-<Warning>
-  Tout configuration personnalisable peux empêcher certain compte spécifique.
-</Warning>
 
 ## Configuration
 
@@ -39,7 +35,7 @@ Le système de **restriction d'âge** est baser sur l'âge du compte et éviter 
     </Frame>
 
     <Tip>
-      Vous pouvez configurer la limite d'âge du compte avec un modal demande le nombre de temps avec l'unité en heure, et autre...
+      Vous pouvez configurer la limite d'âge du compte avec un modal demandant le nombre de temps avec l'unité en heure, et autre...
 
       <Frame>
         <img
@@ -58,8 +54,8 @@ Le système de **restriction d'âge** est baser sur l'âge du compte et éviter 
 
 Le bot a besoin des permissions suivantes pour que cette protection fonctionne :
 
-- **Voir les logs du serveur** (audit logs) : pour identifier l'auteur de l'expulsion
-- **Administrateur** : Cette permission est très recommandé pour l'ensemble des protections
+- **Voir les logs du serveur** (audit logs) : pour identifier l'auteur de l'expulsion.
+- **Administrateur** : Cette permission est très recommandé pour l'ensemble des protections.
 
 <Check>
   Placez le rôle du bot **au-dessus** des rôles du staff et des équipes en qui vous n'avez pas une confiance totale, sinon il ne pourra pas les sanctionner.

@@ -56,7 +56,7 @@
             "pages": [
               "protect",
               {
-                "group": "CGU & Policy",
+                "group": "Règles & Confidentialité",
                 "pages": [
                   "tos",
                   "policy"
@@ -96,7 +96,7 @@
             "pages": [
               "introduction",
               {
-                "group": "CGU TOS",
+                "group": "Règles & Confidentialité",
                 "pages": [
                   "cgu",
                   "tos-2"

@@ -1,5 +1,63 @@
 ---
-title: "Anti Transfère"
+title: "Anti Transfert"
 ---
 
-## En cours de développement
+<Note>
+  Cette protection est accessible via la commande `op!settings` ou `/config panel`.
+</Note>
+
+**Le système Anti-Transfert :** Empêche l’envoi de messages transférés ou provenant d’une source externe afin de limiter le spam, les contenus indésirables et les tentatives de contournement de la modération.
+
+<Info>
+  Seul le propriétaire du serveur peut whitelister les personnes autorisées à configurer les protections.
+</Info>
+
+## Configuration
+
+<Steps>
+  <Step title="Ouvrir le panel">
+    Exécutez la commande `/config panel` ou `op!settings`.
+  </Step>
+  <Step title="Sélectionner la protection">
+    Ouvrez le menu déroulant et choisissez `11. Autre option => 8. Anti-Transfère`.
+  </Step>
+  <Step title="Activer la protection">
+    Utilisez le bouton **Activer** / **Désactiver**. Les boutons et les émojis changent selon l'état de la fonctionnalité.
+
+    <img
+      src="/images/image-23.png"
+      alt="Image"
+      title="Image"
+      className="mx-auto"
+    />
+  </Step>
+  <Step title="Listes blanches">
+    L'Anti-Lien dispose de ses propres whitelists, en plus de la whitelist globale du serveur. Trois boutons sont disponibles dans le panel :
+
+    - **Whitelist Salon** : les message transféré sont autorisés dans les salons ajoutés. Dans un fil de discussion, c'est le salon parent qui est pris en compte.
+    - **Whitelist Utilisateur** : les personnes en étant dans la liste, peuvent transférer sans problème.
+    - **Whitelist Rôle**: les utilisateurs ayant un rôle whitelist peuvent envoyer des messages transférable, sans être sanctionnés.
+
+    <Tip>
+      Si l'utilisateur recherché n'apparaît pas directement dans la liste, utilisez la barre de recherche intégrée au menu déroulant de Discord pour le retrouver (**pseudo sur le serveur**).
+    </Tip>
+  </Step>
+</Steps>
+
+## Permissions requises
+
+Le bot a besoin des permissions suivantes pour que cette protection fonctionne :
+
+- **Voir les logs du serveur** (audit logs) : pour identifier l'auteur de l'expulsion.
+- **Bannir & Kick des membres** : pour sanctionner l'auteur de l'action.
+- **Gérer les messages** : pour supprimer les contenus transférable.
+
+<Check>
+  Placez le rôle du bot **au-dessus** des rôles du staff et des équipes en qui vous n'avez pas une confiance totale, sinon il ne pourra pas les sanctionner.
+
+  Si vous utilisez un bot personnalisé, placez-le **en dessous** de OXYDE Protect.
+</Check>
+
+<Card title="Un problème avec cette fonctionnalité ?" icon="life-buoy" horizontal href="https://discord.gg/uJC8QR9Yky">
+  Rejoignez notre serveur de [support](https://discord.gg/neU8YJYkzQ), on vous répondra rapidement.
+</Card>

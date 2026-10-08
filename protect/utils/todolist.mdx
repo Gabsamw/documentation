@@ -2,4 +2,100 @@
 title: "ToDo List"
 ---
 
-## En cours de développement
+<Note>
+  Cette commande est accessible directement via à /todolist-create.
+</Note>
+
+Le système de Todo-List permet de répertorier l’ensemble de vos objectifs et des tâches à accomplir. Au fur et à mesure de votre progression, vous pouvez mettre à jour le statut de chaque tâche afin de suivre son avancement, d’identifier les objectifs déjà atteints et de visualiser clairement les actions restantes. Cette fonctionnalité vous permet de mieux organiser votre travail, de suivre votre progression et de gérer efficacement vos différents projets.
+
+<Warning>
+  Seuls les personnes administrateur peuvent créer des todo-list.
+</Warning>
+
+<Steps>
+  <Step title="Définition des accès">
+    <Danger>
+      Seuls les membres possédant le rôle d’accès préalablement défini lors de la configuration seront autorisés à modifier le statut des tâches. Cette restriction permet de contrôler les modifications et de garantir une gestion sécurisée de la Todo-List.
+
+      <Frame>
+        ![Image](/images/image-24.png "Image")
+      </Frame>
+    </Danger>
+  </Step>
+  <Step title="Sélecteur de menu configuration">
+    1. La configuration du système s’effectue à l’aide du sélecteur de menu prévu à cet effet. Celui-ci vous permet de gérer les différentes tâches selon vos besoins.
+
+       **Ajouter une tâche**
+
+       Vous pouvez ajouter une nouvelle tâche en sélectionnant l’option correspondante. Un formulaire (_modal_) s’ouvrira afin de vous permettre de renseigner le nom de l’objectif que vous souhaitez ajouter à votre liste.
+
+       **Modifier une tâche**
+
+       Vous avez la possibilité de modifier une tâche existante en la sélectionnant dans le menu déroulant proposé par Oxyde Protect. Durant la phase de configuration, seul le nom de la tâche peut être modifié.
+
+       **Supprimer une tâche**
+
+       Vous pouvez supprimer une tâche à tout moment pendant la configuration. Il vous suffit de sélectionner l’option de suppression, puis de choisir la tâche concernée dans le menu déroulant.
+
+    <Frame>
+      <img
+        src="/images/image-25.png"
+        alt="Image"
+        title="Image"
+      />
+    </Frame>
+  </Step>
+  <Step title="Finalisation de la configuration">
+    1. Une fois la configuration terminée, votre Todo-List est prête à être utilisée. Les membres disposant du rôle d’accès requis pourront alors mettre à jour le statut des différents objectifs directement depuis les commandes prévues à cet effet.
+
+       **Attention :** une fois la configuration finalisée, il n’est plus possible de revenir au menu de configuration initial. Toute modification structurelle nécessitant une nouvelle configuration devra donc être préparée avant de valider cette étape.
+
+    <Frame>
+      ![Image](/images/image-27.png "Image")
+    </Frame>
+  </Step>
+</Steps>
+
+## Status des tâches
+
+Chaque tâche peut disposer de l’un des trois statuts suivants, permettant d’identifier rapidement son état d’avancement.
+
+<table>
+  <colgroup>
+    <col width="175" />
+    <col width="591" />
+    <col width="203" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Icône</th>
+      <th>Status</th>
+      <th>Signification</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>⏳</td>
+      <td>En cours.</td>
+      <td>La tâche est en cours de réalisation</td>
+    </tr>
+    <tr>
+      <td>✅</td>
+      <td>Terminée.</td>
+      <td>L'objectif à été atteint et la tâche est terminée.</td>
+    </tr>
+    <tr>
+      <td>❌</td>
+      <td>Non terminée.</td>
+      <td>La tâche n'a pas encore été accomplie.</td>
+    </tr>
+  </tbody>
+</table>
+
+<Danger>
+  Ces indicateurs permettent de visualiser rapidement l’état de chaque objectif et de suivre l’avancement global de votre liste.
+</Danger>
+
+<Card title="Un problème avec cette fonctionnalité ?" icon="life-buoy" horizontal href="https://discord.gg/uJC8QR9Yky">
+  Rejoignez notre serveur de [support](https://discord.gg/neU8YJYkzQ), on vous répondra rapidement.
+</Card>

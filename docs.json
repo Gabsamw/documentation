@@ -126,12 +126,6 @@
       {
         "language": "en",
         "pages": [
-          {
-            "group": "Getting Started",
-            "pages": [
-              "quickstart"
-            ]
-          },
           "index-2-2"
         ]
       }

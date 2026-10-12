@@ -127,7 +127,8 @@
         "language": "en",
         "pages": [
           "index-2-2"
-        ]
+        ],
+        "default": true
       }
     ]
   },

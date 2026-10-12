@@ -125,10 +125,20 @@
       },
       {
         "language": "en",
-        "pages": [
-          "index-2-2"
-        ],
-        "default": true
+        "groups": [
+          {
+            "group": "Welcome",
+            "pages": [
+              "index-2-2"
+            ]
+          },
+          {
+            "group": "OXYDE Protect",
+            "pages": [
+              "introduction-2"
+            ]
+          }
+        ]
       }
     ]
   },
